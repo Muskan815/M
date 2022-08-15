@@ -1,1 +1,96 @@
-magento 2.4.4
+As per the task provided to me on 11th August 2022
+I have successfully installed Magento 2.4.4 on the local host. 
+Steps involved    
+Install Xampp
+Composer
+Elasticsearch
+PHP Extensions and configure php.ini using Xamp control panel
+Create database for Magento on phpmyadmin
+Installed magento 2.4.5
+Server configuration
+Followed steps to remove errors encountered
+Admin login
+Successfully login to dashboard
+
+
+2 .Folder structure of Magento
+It plays a significant role in customizing Magento 2 website
+app:  includes 3 main sub directories:
+Design- custom store theme is stored here in frontend whereas all admin themes should be stored in adminhtml
+
+I18n-language packages are stored here
+Etc- contain configuration files
+
+Php Server- includes Router.php use to implement PHP built in server
+
+bin- Magento CLI executable script is stored here which is used to activate Magento commands useful for clearing cache and reindexing
+
+setup- contains files required for Magento installation setup
+
+Generated- Magento’s generated code is stored here
+
+Var- includes generated classes, sessions, cache, database backups and cached error reports. Here we can generate contents of various subdirectories
+var/log- store log files i.e exception.log and system.log
+bin/magento cache:clean: clear cache to see development changes
+
+dev- stores automated functional tests run by Magento Test Framework
+
+lib- contains all vendor library files. Also include non-module based Magento code
+
+pup- index.php file is stored in this directory. We can use this to run applications in production mode. Provides security measure
+
+vendor- contains framework core. Here we can install additional modules. Operations are made using composer.json.file
+
+Component file structure
+Root directory
+Root directory of component matches its name and also includes subdirectories and files
+
+All components requires files as follows:
+Registration.php
+This file register your component with Magento
+etc/module.xml: stopres basic information about the component
+composer.json  define dependencies needed at runtime
+
+Common directories
+Block: includes PHP controller classes as MVC implementation
+Controller: includes PHP controller classes 
+Etc: include configuration files ; module.xml
+Model: include PHP model classes
+Setup: include classes for module database structure and setup
+
+Additional directories
+Includes folders for localization, plugins and layout
+Api: PHP classes exposed to API
+Console: CLI commands
+Cron: cron job definitions
+Helper: aggregated functionality
+i18n: localization files
+Observer: includes files for executing commands from listener
+Plugin: needed plug-ins
+UI: dta generation files
+View: include view files, static view files, email templates, design template and layout files
+
+Theme file structure
+etc: configuration files like view.xml for image configuration 
+I18n: translation directory
+Media: theme preview images
+Web: optional directory having static files like fonts, images , js
+
+Language package file structure
+Top-level directory is required for language pack 
+
+3. Version Control System in GIT
+When a number of developers are working on a same project they encounter various challenges like collaboration i.e same project, different regions, different storing versions of project (it becomes difficult to restore previous versions and figure out what happened when and by whom) and backup issues
+
+Remote GIT repository is the perfect solution for this issue
+Record all changes made to file or set of files so that specific version may be called later
+Keep all team members on same page or latest version of file
+
+Benefits-
+Manage and protect data
+Keep track of the modifications
+Compare earlier versions
+Support data workflow
+
+
+
